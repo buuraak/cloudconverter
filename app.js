@@ -18,6 +18,11 @@ app.use((request, response, next) => {
     next();
 });
 
+
+app.get('/', (request, response) => {
+    response.send('<h1>This app only works when compressing an image through the <a href="https://image-optimizer-amber.vercel.app/">Image compressor</a> app</h1>');
+});
+
 app.post('/compress-image', async (request, response) => {
     if(!request.body.file) {
         response.status(400).json({error: "Missing required file property"});
