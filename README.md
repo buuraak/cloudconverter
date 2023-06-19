@@ -1,6 +1,6 @@
 # cloudconverter
 
-Simple Node.js web app that has an endpoint which takes POST requests, to compress the images that I upload on my own S3 buckets using my <a href="https://github.com/buuraak/image-optimizer">Image optimizer</a> app.
+Simple Node.js web app that has an endpoint which takes POST requests, to compress the images that I upload on my own S3 bucket using my <a href="https://github.com/buuraak/image-optimizer">Image optimizer</a> app.
 
 This application uses the following:
 1. Express
