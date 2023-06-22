@@ -29,7 +29,7 @@ app.post('/compress-image', async (request, response) => {
         return;
     }
 
-    let fileUrl = `${AWS_URL}/${request.body.file}`;
+    let fileUrl = `${AWS_URL}/${encodeURIComponent(request.body.file)}`;
 
     try {
         let job = await compressor.jobs.create({
@@ -37,7 +37,7 @@ app.post('/compress-image', async (request, response) => {
                 "import": {
                     "operation": "import/url",
                     "url": fileUrl,
-                    "filename": request.body.file
+                    "filename": encodeURIComponent(request.body.file)
                 },
                 "optimize": {
                     "operation": "optimize",
